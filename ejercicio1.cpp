@@ -6,8 +6,9 @@
 
 int main()
 {
-	int errno;
-	errno=setuid(0);
+	setuid(0);
+	perror("Error");
+	std::cout << "Error number: " << errno << std::endl;
 	std::cout << strerror(errno) << std::endl;
 	return 1;
 }
