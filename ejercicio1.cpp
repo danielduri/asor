@@ -6,9 +6,10 @@
 
 int main()
 {
-	setuid(0);
-	perror("Error");
-	std::cout << "Error number: " << errno << std::endl;
-	std::cout << strerror(errno) << std::endl;
+	if(setuid(0)==-1){
+		perror("Error");
+		std::cout << "Error number: " << errno << std::endl;
+		std::cout << strerror(errno) << std::endl;
+	}	
 	return 1;
 }
