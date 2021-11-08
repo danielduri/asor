@@ -1,0 +1,24 @@
+usuario_vms@pto0604:~/pr2$ ls -l
+total 40
+-rwxr-xr-x 1 usuario_vms users 17144 nov  8 10:17 a.out
+drwxr-xr-x 2 usuario_vms users  4096 nov  8 10:26 dummydir
+-rw-r----- 2 usuario_vms users     0 nov  8 10:01 dummyfile
+-rw-r--r-- 1 usuario_vms users     0 nov  8 10:01 dummyfileshell
+-rw-r----- 2 usuario_vms users     0 nov  8 10:01 dummyriglink
+lrwxrwxrwx 1 usuario_vms users     9 nov  8 10:29 dummysymlink -> dummyfile
+lrwxrwxrwx 1 usuario_vms users     8 nov  8 10:26 dummysymlinkdir -> dummydir
+-rw-r--r-- 1 usuario_vms users   139 nov  8 09:24 ej3
+-rw-r--r-- 1 usuario_vms users   337 nov  8 09:40 ej5.cpp
+-rw-r--r-- 1 usuario_vms users   352 nov  8 09:56 ej7.cpp
+-rw-r--r-- 1 usuario_vms users  2147 nov  8 10:22 ej9.cpp
+
+usuario_vms@pto0604:~/pr2$ ls -i
+5775576 a.out           5775633 dummyriglink     5775574 ej5.cpp
+6951903 dummydir        5775691 dummysymlink     5775619 ej7.cpp
+5775633 dummyfile       5775686 dummysymlinkdir  5775662 ej9.cpp
+5775637 dummyfileshell  5775351 ej3
+
+inodos de dummyfile y dummyriglink son iguales 5775633
+inodos de dummyfile y dummysymlink son distintos
+inodos de dummydir y dummysymlinkdir son distintos
+no se permiten enlaces fuertes para directorios
