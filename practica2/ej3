@@ -1,0 +1,4 @@
+Un fichero nuevo se crea con rw-r--r--.
+Para cambiarlo a rw-r--r-x, bastaría con añadir x a otros:
+chmod o+x fichero;
+chmod 645 fichero;
